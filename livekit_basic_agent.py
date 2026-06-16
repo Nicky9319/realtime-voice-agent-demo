@@ -180,7 +180,7 @@ async def entrypoint(ctx: agents.JobContext):
     # Configure the voice pipeline with the essentials
     session = AgentSession(
         stt=deepgram.STT(model="nova-2"),
-        llm=google.LLM(model="gemini-2.5-flash"),
+        llm=google.LLM(model="gemini-3.1-flash-lite"),
         tts=cartesia.TTS(),
         vad=silero.VAD.load(),
     )
